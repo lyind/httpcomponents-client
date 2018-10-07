@@ -31,7 +31,7 @@
     <relativePath>../httpcomponents-parent/pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>httpcomponents-client</artifactId>
+  <artifactId>httpcomponents-client-ga</artifactId>
   <name>Apache HttpComponents Client</name>
   <version>4.5.7-SNAPSHOT</version>
   <description>Apache HttpComponents Client is a library of components for building client side HTTP services</description>
