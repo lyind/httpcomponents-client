@@ -64,6 +64,13 @@
     <tag>4.5.7-SNAPSHOT</tag>
   </scm>
 
+  <repositories>
+    <repository>
+      <id>localrepo</id>
+      <url>file:${user.home}/.m2/repository</url>
+    </repository>
+  </repositories>
+
   <properties>
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
@@ -89,9 +96,9 @@
         <version>${httpcore.version}</version>
       </dependency>
       <dependency>
-        <groupId>commons-logging</groupId>
-        <artifactId>commons-logging</artifactId>
-        <version>${commons-logging.version}</version>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>1.8.0-beta2</version>
       </dependency>
       <dependency>
         <groupId>commons-codec</groupId>
