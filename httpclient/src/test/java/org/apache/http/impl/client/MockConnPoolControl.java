@@ -28,6 +28,7 @@ package org.apache.http.impl.client;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.http.conn.routing.HttpRoute;
 import org.apache.http.pool.ConnPoolControl;
@@ -35,7 +36,7 @@ import org.apache.http.pool.PoolStats;
 
 public final class MockConnPoolControl implements ConnPoolControl<HttpRoute> {
 
-    private final ConcurrentHashMap<HttpRoute, Integer> maxPerHostMap;
+    private final ConcurrentMap<HttpRoute, Integer> maxPerHostMap;
 
     private volatile int totalMax;
     private volatile int defaultMax;

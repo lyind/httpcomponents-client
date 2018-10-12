@@ -28,6 +28,7 @@ package org.apache.http.impl.client;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.http.annotation.Contract;
 import org.apache.http.annotation.ThreadingBehavior;
@@ -44,7 +45,7 @@ import org.apache.http.util.Args;
 @Contract(threading = ThreadingBehavior.SAFE)
 public class BasicCredentialsProvider implements CredentialsProvider {
 
-    private final ConcurrentHashMap<AuthScope, Credentials> credMap;
+    private final ConcurrentMap<AuthScope, Credentials> credMap;
 
     /**
      * Default constructor.

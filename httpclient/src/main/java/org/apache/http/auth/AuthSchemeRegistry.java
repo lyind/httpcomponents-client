@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.http.HttpRequest;
 import org.apache.http.annotation.Contract;
@@ -53,7 +54,7 @@ import org.apache.http.util.Args;
 @Deprecated
 public final class AuthSchemeRegistry implements Lookup<AuthSchemeProvider> {
 
-    private final ConcurrentHashMap<String,AuthSchemeFactory> registeredSchemes;
+    private final ConcurrentMap<String,AuthSchemeFactory> registeredSchemes;
 
     public AuthSchemeRegistry() {
         super();

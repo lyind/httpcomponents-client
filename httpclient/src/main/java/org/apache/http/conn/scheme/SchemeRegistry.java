@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.http.HttpHost;
 import org.apache.http.annotation.Contract;
@@ -49,7 +50,7 @@ import org.apache.http.util.Args;
 public final class SchemeRegistry {
 
     /** The available schemes in this registry. */
-    private final ConcurrentHashMap<String,Scheme> registeredSchemes;
+    private final ConcurrentMap<String,Scheme> registeredSchemes;
 
     /**
      * Creates a new, empty scheme registry.

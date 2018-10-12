@@ -32,6 +32,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.http.HttpRequest;
 import org.apache.http.annotation.Contract;
@@ -55,7 +56,7 @@ import org.apache.http.util.Args;
 @Deprecated
 public final class CookieSpecRegistry implements Lookup<CookieSpecProvider> {
 
-    private final ConcurrentHashMap<String,CookieSpecFactory> registeredSpecs;
+    private final ConcurrentMap<String,CookieSpecFactory> registeredSpecs;
 
     public CookieSpecRegistry() {
         super();

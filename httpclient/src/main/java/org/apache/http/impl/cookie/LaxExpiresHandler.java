@@ -32,6 +32,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -73,7 +74,7 @@ public class LaxExpiresHandler extends AbstractCookieAttributeHandler implements
     }
     private static final Map<String, Integer> MONTHS;
     static {
-        final ConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<String, Integer>(12);
+        final ConcurrentMap<String, Integer> map = new ConcurrentHashMap<String, Integer>(12);
         map.put("jan", Calendar.JANUARY);
         map.put("feb", Calendar.FEBRUARY);
         map.put("mar", Calendar.MARCH);

@@ -28,6 +28,7 @@ package org.apache.http.conn.params;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.http.annotation.Contract;
 import org.apache.http.annotation.ThreadingBehavior;
@@ -51,7 +52,7 @@ public final class ConnPerRouteBean implements ConnPerRoute {
     /** The default maximum number of connections allowed per host */
     public static final int DEFAULT_MAX_CONNECTIONS_PER_ROUTE = 2;   // Per RFC 2616 sec 8.1.4
 
-    private final ConcurrentHashMap<HttpRoute, Integer> maxPerHostMap;
+    private final ConcurrentMap<HttpRoute, Integer> maxPerHostMap;
 
     private volatile int defaultMax;
 

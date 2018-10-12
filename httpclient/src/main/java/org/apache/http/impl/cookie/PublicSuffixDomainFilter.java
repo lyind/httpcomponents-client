@@ -28,6 +28,7 @@ package org.apache.http.impl.cookie;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 import org.apache.http.annotation.Contract;
 import org.apache.http.annotation.ThreadingBehavior;
@@ -59,7 +60,7 @@ public class PublicSuffixDomainFilter implements CommonCookieAttributeHandler {
     private final Map<String, Boolean> localDomainMap;
 
     private static Map<String, Boolean> createLocalDomainMap() {
-        final ConcurrentHashMap<String, Boolean> map = new ConcurrentHashMap<String, Boolean>();
+        final ConcurrentMap<String, Boolean> map = new ConcurrentHashMap<String, Boolean>();
         map.put(".localhost.", Boolean.TRUE);  // RFC 6761
         map.put(".test.", Boolean.TRUE);       // RFC 6761
         map.put(".local.", Boolean.TRUE);      // RFC 6762
